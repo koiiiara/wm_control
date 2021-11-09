@@ -1,0 +1,80 @@
+body {
+  background-attachment: fixed;
+}
+#wrap {
+  width:960px;
+  margin:30px auto 0;
+}
+#main {
+  width:900px;
+  float:left;
+  padding:10px 30px 0 30px;
+  border:0px;
+}
+#tbl {
+  border:1px dashed #555;
+  padding: 0;
+}
+h1 {
+  font: 2.0em Verdana, Georgia, serif;
+  text-align:center;
+  color:#787878;
+}
+h3.location {
+  font-size:13px;
+  font-weight: bold;
+  margin:12px 0 30px;
+  text-align:center;
+  color:#4D4D4D;
+}
+a:link, a:visited {
+  text-decoration: none;
+  color: #555;
+}
+a:hover, a:active {
+  text-decoration: none;
+  color: #eee;
+  border-bottom: 1px dashed #eee;
+}
+table {
+  width:100%;
+  margin:0;
+  margin-bottom:10px;
+  border:0;
+}
+tr {
+  width:100%;
+  padding:0;
+  margin:0;
+}
+tr:nth-child(odd) {
+  background: url(181818.png);
+}
+tr:nth-child(even) {
+  background: url(222222.png);
+}
+tr:nth-child(odd):hover td, tr:nth-child(odd):active td, tr:nth-child(even):hover td, tr:nth-child(even):active td {
+  color: #888;
+}
+tr:nth-child(odd):hover td a, tr:nth-child(odd):active td a, tr:nth-child(even):hover td a, tr:nth-child(even):active td a {
+  color: #888;
+}
+th {
+  display:none;
+}
+td {
+  height:20px;
+  padding:20px 10px 10px 20px;
+  margin:0;
+}
+td:nth-child(1){
+  width:16px;
+}
+hr {
+  display:none;
+}
+.description {
+  margin:0;
+  padding-right:15px;
+  text-align:left;
+}

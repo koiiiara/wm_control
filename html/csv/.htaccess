@@ -1,0 +1,31 @@
+<IfModule mod_autoindex.c>
+  IndexOptions IgnoreCase FancyIndexing FoldersFirst NameWidth=* XHTML HTMLtable SuppressHTMLPreamble SuppressRules SuppressLastModified IconHeight=16 IconWidth=16
+  IndexOrderDefault Ascending Name
+  HeaderName dirlist_header.shtml
+  ReadmeName dirlist_footer.shtml
+  IndexIgnore error.shtml *.png *.css dirlist_header.shtml dirlist_footer.shtml cgi-bin favicon.ico .htaccess .ftpquota .DS_Store *.log *,v *,t .??* *~ *#
+</IfModule>
+
+
+RewriteEngine On
+RewriteBase /
+Options +Indexes
+Options +FollowSymLinks
+
+#IndexOptions FancyIndexing FoldersFirst 
+#IndexIgnore .htaccess .htaccess~ 
+#IndexOrderDefault Descending Name
+
+DefaultIcon bullet_black.png 
+AddIcon page_excel.png .csv
+AddIcon bullet_arrow_up.png ..
+#ForceType application/octet-stream *.csv
+AddType application/force-download *.csv
+
+<Files *.csv>
+ForceType application/octet-stream
+Header set Content-Disposition attachment
+</Files>
+
+#HeaderName header.html 
+#ReadmeName footer.html

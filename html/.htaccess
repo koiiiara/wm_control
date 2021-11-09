@@ -1,0 +1,20 @@
+RewriteEngine On
+RewriteBase /
+Options -Indexes
+Options +FollowSymLinks
+
+#IndexOptions FancyIndexing FoldersFirst 
+#IndexIgnore .htaccess .htaccess~ 
+#IndexOrderDefault Descending Name
+
+AddIcon "page_excel.png" .csv
+#ForceType application/octet-stream *.csv
+AddType application/force-download *.csv
+
+<Files *.csv>
+ForceType application/octet-stream
+Header set Content-Disposition attachment
+</Files>
+
+#HeaderName header.html 
+#ReadmeName footer.html
